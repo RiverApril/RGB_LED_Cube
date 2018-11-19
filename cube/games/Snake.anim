@@ -1,0 +1,131 @@
+B: 0000FF
+P: FF00FF
+O: 000000
+
+# xyz is the coord, c is the color code
+# set: xyzc
+# frameD doesn't clear the previous frame
+
+frame: 100
+set: 517B
+set: 437P
+endframe
+
+frameD: 100
+set: 417B
+endframe
+
+frameD: 100
+set: 317B
+endframe
+
+frameD: 100
+set: 217B
+endframe
+
+frameD: 100
+set: 227B
+endframe
+
+frameD: 100
+set: 237B
+endframe
+
+frameD: 100
+set: 337B
+endframe
+
+frameD: 100
+set: 437B
+endframe
+
+frameD: 100
+set: 537B
+endframe
+
+frameD: 100
+set: 547B
+endframe
+
+frameD: 100
+set: 557B
+endframe
+
+frameD: 100
+set: 457B
+endframe
+
+frameD: 100
+set: 357B
+endframe
+
+frameD: 100
+set: 257B
+endframe
+
+
+
+frameD: 1000
+endframe
+
+
+
+frameD: 100
+set: 517O
+endframe
+
+frameD: 100
+set: 417O
+endframe
+
+frameD: 100
+set: 317O
+endframe
+
+frameD: 100
+set: 217O
+endframe
+
+frameD: 100
+set: 227O
+endframe
+
+frameD: 100
+set: 237O
+endframe
+
+frameD: 100
+set: 337O
+endframe
+
+frameD: 100
+set: 437O
+endframe
+
+frameD: 100
+set: 537O
+endframe
+
+frameD: 100
+set: 547O
+endframe
+
+frameD: 100
+set: 557O
+endframe
+
+frameD: 100
+set: 457O
+endframe
+
+frameD: 100
+set: 357O
+endframe
+
+frameD: 100
+set: 257O
+endframe
+
+
+frame: 200
+endframe

@@ -1,0 +1,15 @@
+R: FF0000
+B: 0000FF
+G: 00FF00
+
+frame: 500
+zLayer: 7
+        
+  GGG   
+  G     
+  GG    
+  GB B  
+  G B   
+   B B  
+        
+endframe

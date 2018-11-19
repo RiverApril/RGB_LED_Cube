@@ -1,0 +1,111 @@
+R: FF0000
+B: 0000FF
+W: FFFFFF
+
+frame: 500
+zLayer: 7
+        
+        
+        
+   RB   
+   BR   
+        
+        
+        
+endframe
+
+frame: 2
+zLayer: 7
+        
+        
+   B    
+   WB   
+   BR   
+        
+        
+        
+endframe
+
+frame: 500
+zLayer: 7
+        
+        
+   B    
+   BB   
+   BR   
+        
+        
+        
+endframe
+
+frame: 2
+zLayer: 7
+        
+        
+   B    
+   BB   
+  RWR   
+        
+        
+        
+endframe
+
+frame: 500
+zLayer: 7
+        
+        
+   B    
+   BB   
+  RRR   
+        
+        
+        
+endframe
+
+frame: 2
+zLayer: 7
+        
+        
+   B    
+   BB   
+  RWR   
+   B    
+        
+        
+endframe
+
+frame: 500
+zLayer: 7
+        
+        
+   B    
+   BB   
+  RBR   
+   B    
+        
+        
+endframe
+
+frame: 2
+zLayer: 7
+        
+        
+   BR   
+   WW   
+  RBR   
+   B    
+        
+        
+endframe
+
+frame: 500
+zLayer: 7
+        
+        
+   BR   
+   RR   
+  RBR   
+   B    
+        
+        
+endframe

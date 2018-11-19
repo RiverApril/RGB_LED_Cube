@@ -1,0 +1,150 @@
+R: FF0000
+G: 00FF00
+B: 0000FF
+
+frame: 300
+zLayer: 7
+        
+ RR     
+ RR     
+        
+        
+        
+        
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+        
+        
+        
+        
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+        
+        
+     RR 
+     RR 
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+   BB   
+   BB   
+     RR 
+     RR 
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+   BB   
+   BB   
+ RR  RR 
+ RR  RR 
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+   BB   
+   BB   
+ RRBBRR 
+ RRBBRR 
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+ RRBB   
+ RRBB   
+ RRBBRR 
+ RRBBRR 
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+     BB 
+     BB 
+   BB   
+   BB   
+   BBRR 
+   BBRR 
+        
+endframe
+
+frame: 300
+zLayer: 7
+        
+ RR  BB 
+ RR  BB 
+ RRBB   
+ RRBB   
+ RRBBRR 
+ RRBBRR 
+        
+endframe
+
+#frame: 300
+#zLayer: 7
+#RRR     
+# R      
+# RBBB   
+# R B    
+#   B GGG
+#  BBBG  
+#     G  
+#     GGG
+#endframe
+#
+#frame: 300
+#zLayer: 7
+#RRR     
+# R      
+# R B    
+# RB B   
+#  BBBGGG
+#  B BG  
+#     G  
+#     GGG
+#endframe
+#
+#frame: 300
+#zLayer: 7
+#RRR     
+# R      
+# RBBB   
+# RB B   
+#  B BGGG
+#  BBBGG 
+#     G  
+#     GGG
+#endframe
+#
+#frame: 300
+#endframe

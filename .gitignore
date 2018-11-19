@@ -1,0 +1,9 @@
+*
+!/**/
+!*.*
+*.b#*
+*.s#*
+.DS_Store
+circuit/scraps/
+*.xcodeProj/
+*.pro
