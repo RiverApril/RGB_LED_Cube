@@ -7,3 +7,4 @@
 circuit/scraps/
 *.xcodeProj/
 *.pro
+*.job
