@@ -115,7 +115,7 @@ int main(){
     while(running){
         JoystickCore::processEvents();
 
-        if(JoystickCore::buttonPressed[JS_BUTTON_SELECT]){
+        if(JoystickCore::buttonPressed[JS_BUTTON_HOME]){
             running = false;
             break;
         }

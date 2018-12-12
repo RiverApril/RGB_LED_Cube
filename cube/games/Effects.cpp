@@ -22,7 +22,7 @@ int main(){
 
     clock_t begin = clock();
 
-    int effectIndex = 0;
+    int effectIndex = 2;
     const int effectCount = 3;
 
     for(pos_t i = 0; i < 512; i++){
@@ -41,7 +41,7 @@ int main(){
     while(running){
         JoystickCore::processEvents();
 
-        if(JoystickCore::buttonPressed[JS_BUTTON_SELECT]){
+        if(JoystickCore::buttonPressed[JS_BUTTON_HOME]){
             running = false;
             break;
         }
