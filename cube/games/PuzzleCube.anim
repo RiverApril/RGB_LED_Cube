@@ -1,0 +1,28 @@
+R: FF0000
+B: 0000FF
+G: 00FF00
+Y: FFFF00
+
+frame: 500
+zLayer: 7
+   YY   
+  YYYY  
+ YYYYYY 
+ BYYYYR
+ BBYYRR
+ BBBRRR
+  BBRR
+   BR
+endframe
+
+frame: 500
+zLayer: 7
+   YY   
+  YYYY  
+ YYYYGG 
+ BYYGGR
+ BBGGRR
+ BBYRRR
+  BYRR
+   YR
+endframe
