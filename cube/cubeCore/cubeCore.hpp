@@ -42,6 +42,14 @@
 #define JS_AXIS_RX 2
 #define JS_AXIS_RY 3
 
+//Orientation of cube:
+//up: z+
+//down: z-
+//left: x-
+//right: x+
+//forward: y-
+//backward: y+
+
 
 typedef unsigned int color_t;
 typedef unsigned short pos_t;
