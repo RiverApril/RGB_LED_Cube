@@ -9,6 +9,7 @@
 #include <math.h>
 
 double starGrid[512];
+unsigned char pipeGrid[512];
 
 
 int main(){
@@ -23,11 +24,8 @@ int main(){
     clock_t begin = clock();
 
     int effectIndex = 2;
-    const int effectCount = 3;
+    const int effectCount = 4;
 
-    for(pos_t i = 0; i < 512; i++){
-        starGrid[i] = 0.0;
-    }
     double twingleTimer = 0;
 
     double undulateTime = 0;
@@ -35,6 +33,14 @@ int main(){
     double noiseScale = 0.125;
     double maxPerlin = -1;
     double minPerlin = 1;
+
+    const int PIPES = 4;
+    pos_t pipeHeads[PIPES];
+    unsigned char pipeDir[PIPES];
+    const color_t colorMap[PIPES+1] = {0x000000, 0xFF0000, 0x00FF00, 0x0000FF, 0xFF00FF};
+    double pipeTimer = 0;
+
+    bool reset = true;
 
     srand(time(0));
 
@@ -52,10 +58,24 @@ int main(){
 
         if(JoystickCore::buttonPressed[JS_BUTTON_LEFT]){
             effectIndex = effectIndex==0?effectCount-1:effectIndex-1;
+            reset = true;
         }
 
         if(JoystickCore::buttonPressed[JS_BUTTON_RIGHT]){
             effectIndex = (effectIndex+1)%effectCount;
+            reset = true;
+        }
+
+        if(reset){
+            reset = false;
+            for(pos_t i = 0; i < 512; i++){
+                starGrid[i] = 0.0;
+                pipeGrid[i] = 0;
+            }
+            for(int i = 0; i < PIPES; i++){
+                pipeHeads[i] = rand()%512;
+                pipeDir[i] = rand()%6;
+            }
         }
 
         switch(effectIndex){
@@ -99,7 +119,7 @@ int main(){
                 LightCore::swapBuffers();
                 break;
             }
-            case 2:{
+            case 2:{ // 4D perlin rainbow
                 undulateTime += delta * undulateSpeed;
                 LightCore::clearAll();
                 for(pos_t i = 0; i < 512; i++){
@@ -125,6 +145,47 @@ int main(){
                     noiseScale /= 2;
                 }
 
+                break;
+            }
+            case 3:{
+                pipeTimer -= delta;
+                if(pipeTimer <= 0){
+                    pipeTimer = 0.05;
+                    int tries = 0;
+                    for(unsigned char i = 0; i < PIPES; i++){
+                        if(tries > 50){
+                            reset = true;
+                            break;
+                        }
+                        pipeGrid[pipeHeads[i]] = i+1;
+                        int dx = (pipeDir[i]==0)?-1:((pipeDir[i]==1)?1:0);
+                        int dy = (pipeDir[i]==2)?-1:((pipeDir[i]==3)?1:0);
+                        int dz = (pipeDir[i]==4)?-1:((pipeDir[i]==5)?1:0);
+                        int nx = X_COORD_8(pipeHeads[i])+dx;
+                        int ny = Y_COORD_8(pipeHeads[i])+dy;
+                        int nz = Z_COORD_8(pipeHeads[i])+dz;
+                        if(rand()%2 != 0){
+                            if(nx>=0 && nx<=7 && ny>=0 && ny<=7 && nz>=0 && nz<=7){
+                                pos_t next = COORD_8(nx, ny, nz);
+                                if(pipeGrid[next] == 0){
+                                    pipeHeads[i] = next;
+                                    continue;
+                                }
+                            }
+                        }else{
+                            tries--;
+                        }
+                        pipeDir[i] = rand()%6;
+                        tries++;
+                        i--;
+                        continue;
+                    }
+                }
+                LightCore::clearAll();
+                for(pos_t i = 0; i < 512; i++){
+                    LightCore::setLight(i, colorMap[pipeGrid[i]]);
+                }
+                LightCore::swapBuffers();
                 break;
             }
         }
