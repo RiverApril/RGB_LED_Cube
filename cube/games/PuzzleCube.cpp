@@ -7,7 +7,7 @@
 #include <math.h>
 
 color_t colorMap[13] = {0xFF0000, 0xFF9500, 0x0000FF, 0x00FF00, 0xFFFFFF, 0xFFFF00,
-                        0x7F0000, 0x7F4500, 0x00007F, 0x007F00, 0x7F7F7F, 0x7F7F00, 0xFF00FF};
+                        0xBF0000, 0xBF6500, 0x0000BF, 0x00BF00, 0xBFBFBF, 0xBFBF00, 0xFF00FF};
 int selectedToSideMap[9] = {0, -1, 1, 2, -1, 3, 4, -1, 5};
 int sideOrders[12] = {
     2, 4, 3, 5, //x
