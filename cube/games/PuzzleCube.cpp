@@ -198,12 +198,54 @@ int main(){
         }
 
         int newSelected = -1;
-        if(JoystickCore::buttonPressed[JS_BUTTON_LEFT]){newSelected = 0;};
-        if(JoystickCore::buttonPressed[JS_BUTTON_RIGHT]){newSelected = 2;};
-        if(JoystickCore::buttonPressed[JS_BUTTON_UP]){newSelected = 3;};
-        if(JoystickCore::buttonPressed[JS_BUTTON_DOWN]){newSelected = 5;};
-        if(JoystickCore::buttonPressed[JS_BUTTON_L1]){newSelected = 6;};
-        if(JoystickCore::buttonPressed[JS_BUTTON_R1]){newSelected = 8;};
+        if(JoystickCore::buttonDown[JS_BUTTON_L2] || JoystickCore::buttonDown[JS_BUTTON_R2]){
+            if(JoystickCore::buttonPressed[JS_BUTTON_LEFT]){
+                turn(puzzleData, 6, true);
+                turn(puzzleData, 7, true);
+                turn(puzzleData, 8, true);
+                dirty = true;
+            }
+            if(JoystickCore::buttonPressed[JS_BUTTON_RIGHT]){
+                turn(puzzleData, 6, false);
+                turn(puzzleData, 7, false);
+                turn(puzzleData, 8, false);
+                dirty = true;
+            }
+            if(JoystickCore::buttonPressed[JS_BUTTON_UP]){
+                turn(puzzleData, 3, false);
+                turn(puzzleData, 4, false);
+                turn(puzzleData, 5, false);
+                dirty = true;
+            }
+            if(JoystickCore::buttonPressed[JS_BUTTON_DOWN]){
+                turn(puzzleData, 3, true);
+                turn(puzzleData, 4, true);
+                turn(puzzleData, 5, true);
+                dirty = true;
+            }
+            if(JoystickCore::buttonPressed[JS_BUTTON_L1]){
+                turn(puzzleData, 0, false);
+                turn(puzzleData, 1, false);
+                turn(puzzleData, 2, false);
+                dirty = true;
+            }
+            if(JoystickCore::buttonPressed[JS_BUTTON_R1]){
+                turn(puzzleData, 0, true);
+                turn(puzzleData, 1, true);
+                turn(puzzleData, 2, true);
+                dirty = true;
+            }
+        }else{
+            if(JoystickCore::buttonPressed[JS_BUTTON_LEFT]){newSelected = 0;}
+            if(JoystickCore::buttonPressed[JS_BUTTON_RIGHT]){newSelected = 2;}
+            if(JoystickCore::buttonPressed[JS_BUTTON_UP]){newSelected = 3;}
+            if(JoystickCore::buttonPressed[JS_BUTTON_DOWN]){newSelected = 5;}
+            if(JoystickCore::buttonPressed[JS_BUTTON_L1]){newSelected = 6;}
+            if(JoystickCore::buttonPressed[JS_BUTTON_R1]){newSelected = 8;}
+        }
+
+        if(JoystickCore::buttonPressed[JS_BUTTON_X]){newSelected = 9;};
+        if(JoystickCore::buttonPressed[JS_BUTTON_Y]){newSelected = 9;};
 
         if(JoystickCore::buttonPressed[JS_BUTTON_A]){
             for(int i = 0; i < 9; i++){
@@ -222,7 +264,7 @@ int main(){
             dirty = true;
         }
 
-        if(JoystickCore::buttonDown[JS_BUTTON_L2] && JoystickCore::buttonDown[JS_BUTTON_R2]){
+        if(JoystickCore::buttonDown[JS_BUTTON_L2] && JoystickCore::buttonDown[JS_BUTTON_R2] && JoystickCore::buttonDown[JS_BUTTON_SELECT]){
             turn(puzzleData, rand()%9, rand()%2==0);
             dirty = true;
             for(int i = 0; i < 9; i++){
@@ -237,6 +279,10 @@ int main(){
         }
 
         if(newSelected != -1){
+            if(newSelected == 9){
+                newSelected = -1;
+            }
+
             if(selected[newSelected]){
                 if(newSelected%3==0)newSelected++;
                 else if(newSelected%3==2)newSelected--;
