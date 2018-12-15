@@ -6844,7 +6844,6 @@ naming: grid - package width</description>
 <part name="X_7" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="C2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1"/>
 <part name="C3" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1"/>
-<part name="X_8" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="X_9" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="X_10" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="OUT" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X12" device="" package3d_urn="urn:adsk.eagle:package:22420/2"/>
@@ -6906,7 +6905,6 @@ naming: grid - package width</description>
 <attribute name="NAME" x="174.244" y="13.081" size="1.778" layer="95"/>
 <attribute name="VALUE" x="174.244" y="8.001" size="1.778" layer="96"/>
 </instance>
-<instance part="X_8" gate="G$1" x="111.76" y="17.78" smashed="yes" rot="R180"/>
 <instance part="X_9" gate="G$1" x="111.76" y="17.78" smashed="yes" rot="R180"/>
 <instance part="X_10" gate="G$1" x="172.72" y="17.78" smashed="yes" rot="R180"/>
 <instance part="OUT" gate="A" x="106.68" y="76.2" smashed="yes">
@@ -7109,11 +7107,9 @@ naming: grid - package width</description>
 <wire x1="50.8" y1="17.78" x2="50.8" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X_8" gate="G$1" pin="0"/>
 <pinref part="X_9" gate="G$1" pin="0"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="111.76" y1="17.78" x2="111.76" y2="15.24" width="0.1524" layer="91"/>
-<junction x="111.76" y="17.78"/>
 </segment>
 <segment>
 <pinref part="X_10" gate="G$1" pin="0"/>
