@@ -7042,12 +7042,14 @@ naming: grid - package width</description>
 <wire x1="162.56" y1="-7.62" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="30.48" x2="101.6" y2="30.48" width="0.1524" layer="91"/>
 <junction x="101.6" y="30.48"/>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="38.1" y1="30.48" x2="-22.86" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="30.48" x2="0" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="0" y1="30.48" x2="0" y2="27.94" width="0.1524" layer="91"/>
 <junction x="38.1" y="30.48"/>
-<pinref part="JP2" gate="A" pin="3"/>
-<wire x1="-22.86" y1="30.48" x2="-40.64" y2="30.48" width="0.1524" layer="91"/>
-<junction x="-22.86" y="30.48"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="0" y1="27.94" x2="-22.86" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="2"/>
+<wire x1="-22.86" y1="27.94" x2="-40.64" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-22.86" y="27.94"/>
 </segment>
 </net>
 <net name="SERIAL" class="0">
@@ -7067,7 +7069,6 @@ naming: grid - package width</description>
 <pinref part="TLC5961IN" gate="A" pin="LE(ED1)"/>
 <wire x1="53.34" y1="2.54" x2="45.72" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="2.54" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
-<junction x="45.72" y="27.94"/>
 <pinref part="DVR-GRN" gate="A" pin="LE(ED1)"/>
 <wire x1="114.3" y1="2.54" x2="106.68" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="2.54" x2="106.68" y2="27.94" width="0.1524" layer="91"/>
@@ -7076,11 +7077,14 @@ naming: grid - package width</description>
 <wire x1="167.64" y1="2.54" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="27.94" x2="106.68" y2="27.94" width="0.1524" layer="91"/>
 <junction x="106.68" y="27.94"/>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="45.72" y1="27.94" x2="-22.86" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="-22.86" y1="27.94" x2="-40.64" y2="27.94" width="0.1524" layer="91"/>
-<junction x="-22.86" y="27.94"/>
+<wire x1="45.72" y1="27.94" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="27.94" x2="2.54" y2="25.4" width="0.1524" layer="91"/>
+<junction x="45.72" y="27.94"/>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="2.54" y1="25.4" x2="-22.86" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="1"/>
+<wire x1="-22.86" y1="25.4" x2="-40.64" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-22.86" y="25.4"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -7159,8 +7163,9 @@ naming: grid - package width</description>
 <wire x1="172.72" y1="17.78" x2="172.72" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="7.62" y1="25.4" x2="7.62" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="25.4" x2="7.62" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="X_11" gate="G$1" pin="0"/>
+<wire x1="7.62" y1="22.86" x2="7.62" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="25.4" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
 <label x="25.4" y="25.4" size="1.778" layer="95"/>
 <pinref part="TLC5961IN" gate="A" pin="~OE(ED2)"/>
@@ -7176,9 +7181,11 @@ naming: grid - package width</description>
 <wire x1="165.1" y1="25.4" x2="104.14" y2="25.4" width="0.1524" layer="91"/>
 <junction x="104.14" y="25.4"/>
 <wire x1="7.62" y1="25.4" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="-22.86" y1="25.4" x2="7.62" y2="25.4" width="0.1524" layer="91"/>
-<junction x="7.62" y="25.4"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="-22.86" y1="30.48" x2="-2.54" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="30.48" x2="-2.54" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="22.86" x2="7.62" y2="22.86" width="0.1524" layer="91"/>
+<junction x="7.62" y="22.86"/>
 </segment>
 </net>
 <net name="L_R7" class="0">
