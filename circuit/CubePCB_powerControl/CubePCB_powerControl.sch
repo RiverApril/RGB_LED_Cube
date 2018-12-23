@@ -6462,9 +6462,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <attribute name="NAME" x="1.27" y="109.855" size="1.778" layer="95"/>
 <attribute name="VALUE" x="1.27" y="73.66" size="1.778" layer="96"/>
 </instance>
-<instance part="JP6" gate="G$1" x="101.6" y="119.38" smashed="yes" rot="R180">
-<attribute name="NAME" x="107.95" y="113.665" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="107.95" y="124.46" size="1.778" layer="96" rot="R180"/>
+<instance part="JP6" gate="G$1" x="101.6" y="121.92" smashed="yes" rot="R180">
+<attribute name="NAME" x="107.95" y="116.205" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="107.95" y="127" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="SUPPLY2" gate="GND" x="38.1" y="71.12" smashed="yes">
 <attribute name="VALUE" x="36.195" y="67.945" size="1.778" layer="96"/>
@@ -6490,7 +6490,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="-33.02" y1="58.42" x2="-33.02" y2="172.72" width="0.762" layer="92"/>
 <wire x1="-33.02" y1="172.72" x2="53.34" y2="172.72" width="0.762" layer="92"/>
 <label x="0" y="60.96" size="1.778" layer="95"/>
-<wire x1="53.34" y1="172.72" x2="53.34" y2="137.16" width="0.762" layer="92"/>
+<wire x1="53.34" y1="172.72" x2="53.34" y2="139.7" width="0.762" layer="92"/>
 <wire x1="53.34" y1="172.72" x2="91.44" y2="172.72" width="0.762" layer="92"/>
 <wire x1="91.44" y1="172.72" x2="91.44" y2="137.16" width="0.762" layer="92"/>
 </segment>
@@ -6502,7 +6502,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="27.94" y1="119.38" x2="27.94" y2="81.28" width="0.762" layer="92"/>
 <label x="27.94" y="121.92" size="1.778" layer="95"/>
 <wire x1="27.94" y1="119.38" x2="53.34" y2="119.38" width="0.762" layer="92"/>
-<wire x1="53.34" y1="119.38" x2="53.34" y2="129.54" width="0.762" layer="92"/>
+<wire x1="53.34" y1="119.38" x2="53.34" y2="137.16" width="0.762" layer="92"/>
 <wire x1="53.34" y1="119.38" x2="53.34" y2="109.22" width="0.762" layer="92"/>
 <wire x1="53.34" y1="109.22" x2="91.44" y2="109.22" width="0.762" layer="92"/>
 <wire x1="91.44" y1="109.22" x2="91.44" y2="134.62" width="0.762" layer="92"/>
@@ -6517,8 +6517,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="20.32" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="16"/>
-<wire x1="76.2" y1="147.32" x2="91.44" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="3"/>
+<wire x1="68.58" y1="162.56" x2="53.34" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Q2" class="0">
@@ -6530,8 +6530,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <label x="20.32" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="15"/>
-<wire x1="68.58" y1="147.32" x2="53.34" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="5"/>
+<wire x1="68.58" y1="160.02" x2="53.34" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Q3" class="0">
@@ -6543,8 +6543,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="48.26" x2="30.48" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="18"/>
-<wire x1="76.2" y1="144.78" x2="91.44" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="7"/>
+<wire x1="68.58" y1="157.48" x2="53.34" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Q4" class="0">
@@ -6556,8 +6556,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="45.72" x2="27.94" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="19"/>
-<wire x1="68.58" y1="142.24" x2="53.34" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="11"/>
+<wire x1="68.58" y1="152.4" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Q5" class="0">
@@ -6569,8 +6569,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="43.18" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="21"/>
-<wire x1="68.58" y1="139.7" x2="53.34" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="13"/>
+<wire x1="68.58" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Q6" class="0">
@@ -6582,8 +6582,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="40.64" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="22"/>
-<wire x1="76.2" y1="139.7" x2="91.44" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="15"/>
+<wire x1="68.58" y1="147.32" x2="53.34" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="Q7" class="0">
@@ -6595,8 +6595,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="38.1" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="23"/>
-<wire x1="68.58" y1="137.16" x2="53.34" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="19"/>
+<wire x1="68.58" y1="142.24" x2="53.34" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -6673,7 +6673,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="68.58" y1="73.66" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="L1" class="0">
 <segment>
 <portref moduleinst="LAYER1" port="LAYER"/>
 <wire x1="71.12" y1="48.26" x2="63.5" y2="48.26" width="0.1524" layer="91"/>
@@ -6681,7 +6681,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="8"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="L2" class="0">
 <segment>
 <portref moduleinst="LAYER2" port="LAYER"/>
 <wire x1="71.12" y1="25.4" x2="60.96" y2="25.4" width="0.1524" layer="91"/>
@@ -6689,7 +6689,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="7"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="L3" class="0">
 <segment>
 <wire x1="58.42" y1="66.04" x2="58.42" y2="2.54" width="0.1524" layer="91"/>
 <portref moduleinst="LAYER3" port="LAYER"/>
@@ -6697,7 +6697,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="6"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="L4" class="0">
 <segment>
 <portref moduleinst="LAYER4" port="LAYER"/>
 <wire x1="71.12" y1="-20.32" x2="55.88" y2="-20.32" width="0.1524" layer="91"/>
@@ -6705,7 +6705,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="5"/>
 </segment>
 </net>
-<net name="N$15" class="0">
+<net name="L5" class="0">
 <segment>
 <portref moduleinst="LAYER5" port="LAYER"/>
 <wire x1="71.12" y1="-43.18" x2="53.34" y2="-43.18" width="0.1524" layer="91"/>
@@ -6713,7 +6713,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="4"/>
 </segment>
 </net>
-<net name="N$16" class="0">
+<net name="L6" class="0">
 <segment>
 <portref moduleinst="LAYER6" port="LAYER"/>
 <wire x1="71.12" y1="-66.04" x2="50.8" y2="-66.04" width="0.1524" layer="91"/>
@@ -6721,7 +6721,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="3"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="L7" class="0">
 <segment>
 <portref moduleinst="LAYER7" port="LAYER"/>
 <wire x1="71.12" y1="-88.9" x2="48.26" y2="-88.9" width="0.1524" layer="91"/>
@@ -6729,7 +6729,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <pinref part="JP1" gate="A" pin="2"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="L8" class="0">
 <segment>
 <portref moduleinst="LAYER8" port="LAYER"/>
 <wire x1="71.12" y1="-111.76" x2="45.72" y2="-111.76" width="0.1524" layer="91"/>
@@ -6746,8 +6746,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="0" y1="35.56" x2="17.78" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="24"/>
-<wire x1="76.2" y1="137.16" x2="91.44" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="21"/>
+<wire x1="68.58" y1="139.7" x2="53.34" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -6846,17 +6846,21 @@ In this library the device names are the same as the pin names of the symbols, t
 <net name="CLK" class="0">
 <segment>
 <pinref part="JP6" gate="G$1" pin="1"/>
-<label x="81.28" y="116.84" size="1.778" layer="95"/>
-<pinref part="RASP_PI_GPIO" gate="A" pin="40"/>
-<wire x1="104.14" y1="116.84" x2="76.2" y2="116.84" width="0.1524" layer="91"/>
+<label x="93.98" y="119.38" size="1.778" layer="95"/>
+<wire x1="104.14" y1="119.38" x2="76.2" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="38"/>
 </segment>
 </net>
 <net name="LATCH" class="0">
 <segment>
 <pinref part="JP6" gate="G$1" pin="2"/>
-<label x="81.28" y="119.38" size="1.778" layer="95"/>
-<pinref part="RASP_PI_GPIO" gate="A" pin="38"/>
-<wire x1="76.2" y1="119.38" x2="104.14" y2="119.38" width="0.1524" layer="91"/>
+<label x="93.98" y="111.76" size="1.778" layer="95"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="37"/>
+<wire x1="114.3" y1="121.92" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="119.38" x2="55.88" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="119.38" x2="55.88" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="111.76" x2="114.3" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="111.76" x2="114.3" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S1" class="0">
@@ -6865,8 +6869,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="5.08" y1="104.14" x2="-10.16" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="36"/>
-<wire x1="76.2" y1="121.92" x2="91.44" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="35"/>
+<wire x1="53.34" y1="121.92" x2="68.58" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S2" class="0">
@@ -6875,8 +6879,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="12.7" y1="104.14" x2="27.94" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="37"/>
-<wire x1="68.58" y1="119.38" x2="50.8" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="36"/>
+<wire x1="91.44" y1="121.92" x2="76.2" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S3" class="0">
@@ -6885,8 +6889,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="5.08" y1="96.52" x2="-10.16" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="33"/>
-<wire x1="68.58" y1="124.46" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="32"/>
+<wire x1="91.44" y1="127" x2="76.2" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S4" class="0">
@@ -6895,8 +6899,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="12.7" y1="96.52" x2="27.94" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="35"/>
-<wire x1="68.58" y1="121.92" x2="53.34" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="33"/>
+<wire x1="53.34" y1="124.46" x2="68.58" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S5" class="0">
@@ -6905,8 +6909,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="5.08" y1="88.9" x2="-10.16" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="31"/>
-<wire x1="68.58" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="29"/>
+<wire x1="68.58" y1="129.54" x2="53.34" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S6" class="0">
@@ -6915,8 +6919,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="12.7" y1="88.9" x2="27.94" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="32"/>
-<wire x1="76.2" y1="127" x2="91.44" y2="127" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="31"/>
+<wire x1="53.34" y1="127" x2="68.58" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S7" class="0">
@@ -6925,8 +6929,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="5.08" y1="81.28" x2="-10.16" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="26"/>
-<wire x1="76.2" y1="134.62" x2="91.44" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="23"/>
+<wire x1="68.58" y1="137.16" x2="53.34" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="S8" class="0">
@@ -6935,26 +6939,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="12.7" y1="81.28" x2="27.94" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="29"/>
-<wire x1="68.58" y1="129.54" x2="53.34" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="6"/>
-<wire x1="81.28" y1="160.02" x2="76.2" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="14"/>
-<wire x1="81.28" y1="149.86" x2="76.2" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="RASP_PI_GPIO" gate="A" pin="20"/>
-<wire x1="81.28" y1="142.24" x2="76.2" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="RASP_PI_GPIO" gate="A" pin="26"/>
+<wire x1="91.44" y1="134.62" x2="76.2" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
