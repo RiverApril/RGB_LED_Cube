@@ -7018,8 +7018,8 @@ naming: grid - package width</description>
 <bus name="L_B[0..7]">
 <segment>
 <label x="203.2" y="15.24" size="1.778" layer="95"/>
-<wire x1="215.9" y1="-15.24" x2="215.9" y2="50.8" width="0.762" layer="92"/>
-<wire x1="215.9" y1="50.8" x2="121.92" y2="50.8" width="0.762" layer="92"/>
+<wire x1="218.44" y1="-15.24" x2="218.44" y2="50.8" width="0.762" layer="92"/>
+<wire x1="218.44" y1="50.8" x2="121.92" y2="50.8" width="0.762" layer="92"/>
 <wire x1="121.92" y1="50.8" x2="91.44" y2="50.8" width="0.762" layer="92"/>
 <wire x1="91.44" y1="50.8" x2="91.44" y2="88.9" width="0.762" layer="92"/>
 <wire x1="121.92" y1="50.8" x2="121.92" y2="88.9" width="0.762" layer="92"/>
@@ -7190,22 +7190,22 @@ naming: grid - package width</description>
 </net>
 <net name="L_R7" class="0">
 <segment>
-<wire x1="96.52" y1="-15.24" x2="93.98" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="TLC5961IN" gate="A" pin="~OUT6"/>
-</segment>
-<segment>
 <wire x1="111.76" y1="68.58" x2="116.84" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="18"/>
+</segment>
+<segment>
+<pinref part="TLC5961IN" gate="A" pin="~OUT7"/>
+<wire x1="96.52" y1="-12.7" x2="93.98" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_R6" class="0">
 <segment>
-<wire x1="96.52" y1="-12.7" x2="93.98" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="TLC5961IN" gate="A" pin="~OUT7"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="17"/>
+</segment>
+<segment>
+<pinref part="TLC5961IN" gate="A" pin="~OUT6"/>
+<wire x1="96.52" y1="-15.24" x2="93.98" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_R5" class="0">
@@ -7270,22 +7270,22 @@ naming: grid - package width</description>
 </net>
 <net name="L_G7" class="0">
 <segment>
-<wire x1="157.48" y1="-15.24" x2="154.94" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="DVR-GRN" gate="A" pin="~OUT6"/>
-</segment>
-<segment>
 <wire x1="111.76" y1="78.74" x2="119.38" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="10"/>
+</segment>
+<segment>
+<pinref part="DVR-GRN" gate="A" pin="~OUT7"/>
+<wire x1="157.48" y1="-12.7" x2="154.94" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_G6" class="0">
 <segment>
-<wire x1="157.48" y1="-12.7" x2="154.94" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="DVR-GRN" gate="A" pin="~OUT7"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="78.74" x2="93.98" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="9"/>
+</segment>
+<segment>
+<pinref part="DVR-GRN" gate="A" pin="~OUT6"/>
+<wire x1="157.48" y1="-15.24" x2="154.94" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_G5" class="0">
@@ -7350,82 +7350,82 @@ naming: grid - package width</description>
 </net>
 <net name="L_B7" class="0">
 <segment>
-<wire x1="213.36" y1="-15.24" x2="215.9" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT6"/>
-</segment>
-<segment>
 <wire x1="111.76" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="2"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT7"/>
+<wire x1="218.44" y1="-12.7" x2="215.9" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B6" class="0">
 <segment>
-<wire x1="213.36" y1="-12.7" x2="215.9" y2="-12.7" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT7"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="88.9" x2="91.44" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="1"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT6"/>
+<wire x1="218.44" y1="-15.24" x2="215.9" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B5" class="0">
 <segment>
-<wire x1="213.36" y1="-10.16" x2="215.9" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT5"/>
-</segment>
-<segment>
 <wire x1="111.76" y1="86.36" x2="121.92" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="4"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT5"/>
+<wire x1="218.44" y1="-10.16" x2="215.9" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B4" class="0">
 <segment>
-<wire x1="213.36" y1="-7.62" x2="215.9" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT4"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="86.36" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="3"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT4"/>
+<wire x1="218.44" y1="-7.62" x2="215.9" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B3" class="0">
 <segment>
-<wire x1="213.36" y1="-5.08" x2="215.9" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT3"/>
-</segment>
-<segment>
 <wire x1="111.76" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="6"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT3"/>
+<wire x1="218.44" y1="-5.08" x2="215.9" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B2" class="0">
 <segment>
-<wire x1="213.36" y1="-2.54" x2="215.9" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT2"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="83.82" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="5"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT2"/>
+<wire x1="218.44" y1="-2.54" x2="215.9" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B1" class="0">
 <segment>
-<wire x1="213.36" y1="0" x2="215.9" y2="0" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT1"/>
-</segment>
-<segment>
 <wire x1="111.76" y1="81.28" x2="121.92" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="8"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT1"/>
+<wire x1="218.44" y1="0" x2="215.9" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="L_B0" class="0">
 <segment>
-<wire x1="213.36" y1="2.54" x2="215.9" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="DVR-BLU" gate="A" pin="~OUT0"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="OUT" gate="A" pin="7"/>
+</segment>
+<segment>
+<pinref part="DVR-BLU" gate="A" pin="~OUT0"/>
+<wire x1="218.44" y1="2.54" x2="215.9" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="R_EXT$R" class="0">
