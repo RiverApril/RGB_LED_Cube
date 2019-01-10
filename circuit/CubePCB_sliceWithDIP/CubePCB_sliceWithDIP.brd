@@ -3,10 +3,10 @@
 <eagle version="9.2.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="6.25" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -116,17 +116,15 @@
 <wire x1="41.275" y1="0.005" x2="41.275" y2="32.38" width="0" layer="20"/>
 <wire x1="41.275" y1="32.38" x2="0" y2="32.375" width="0" layer="20"/>
 <wire x1="0" y1="32.375" x2="0" y2="0" width="0" layer="20"/>
-<text x="1.5875" y="2.54" size="0.8128" layer="21">0246
+<text x="2.8575" y="3.4925" size="1.2192" layer="21" align="center">0246
 1357</text>
-<text x="9.525" y="0" size="0.8128" layer="21">RED</text>
-<text x="19.05" y="0" size="0.8128" layer="21">GREEN</text>
-<text x="29.5275" y="0" size="0.8128" layer="21">BLUE</text>
+<text x="10.414" y="0.47625" size="0.6096" layer="21" align="center">RED</text>
+<text x="20.6375" y="0.47625" size="0.6096" layer="21" align="center">GREEN</text>
+<text x="30.7975" y="0.47625" size="0.6096" layer="21" align="center">BLUE</text>
 <wire x1="15.5575" y1="0" x2="15.5575" y2="1.5875" width="0.1524" layer="21"/>
 <wire x1="25.7175" y1="0" x2="25.7175" y2="1.5875" width="0.1524" layer="21"/>
-<text x="0.9525" y="13.97" size="0.8128" layer="21" rot="R90">CLK</text>
-<text x="0.9525" y="11.7475" size="0.8128" layer="21" rot="R90">LE</text>
-<text x="40.3225" y="15.875" size="0.8128" layer="21" rot="R270">CLK</text>
-<text x="40.3225" y="13.0175" size="0.8128" layer="21" rot="R270">LE</text>
+<text x="0.635" y="14.9225" size="0.6096" layer="21" rot="R90" align="center">CLK</text>
+<text x="0.635" y="12.3825" size="0.6096" layer="21" rot="R90" align="center">LE</text>
 <text x="7.9375" y="24.765" size="0.6096" layer="21">GND</text>
 <text x="7.9375" y="22.225" size="0.6096" layer="21">SDI</text>
 <text x="7.9375" y="19.685" size="0.6096" layer="21">CLK</text>
@@ -183,9 +181,9 @@
 <text x="31.115" y="13.6525" size="0.6096" layer="21" rot="R90">TLC5916IN</text>
 <wire x1="5.3975" y1="0" x2="5.3975" y2="1.5875" width="0.1524" layer="21"/>
 <wire x1="35.8775" y1="0" x2="35.8775" y2="1.5875" width="0.1524" layer="21"/>
-<text x="0.9525" y="16.51" size="0.8128" layer="21" rot="R90">GND</text>
-<text x="0.9525" y="19.05" size="0.8128" layer="21" rot="R90">SDI</text>
-<text x="0.9525" y="21.59" size="0.8128" layer="21" rot="R90">+5V</text>
+<text x="0.635" y="17.4625" size="0.6096" layer="21" rot="R90" align="center">GND</text>
+<text x="0.635" y="20.0025" size="0.6096" layer="21" rot="R90" align="center">SDI</text>
+<text x="0.635" y="22.5425" size="0.6096" layer="21" rot="R90" align="center">+5V</text>
 <polygon width="0.0000125" layer="25">
 <vertex x="36.03625" y="29.36875"/>
 <vertex x="36.03625" y="26.82875"/>
@@ -354,7 +352,18 @@
 <vertex x="39.52875" y="27.6225"/>
 <vertex x="39.52875" y="27.94"/>
 </polygon>
-<text x="37.465" y="1.74625" size="0.8128" layer="25">v1.0</text>
+<text x="37.1475" y="25.55875" size="0.8128" layer="25">v1.1</text>
+<text x="40.64" y="14.9225" size="0.6096" layer="21" rot="R90" align="center">CLK</text>
+<text x="40.64" y="12.3825" size="0.6096" layer="21" rot="R90" align="center">LE</text>
+<text x="0.635" y="22.5425" size="0.6096" layer="22" rot="MR90" align="center">+5V</text>
+<text x="0.635" y="20.0025" size="0.6096" layer="22" rot="MR90" align="center">SDI</text>
+<text x="0.635" y="17.4625" size="0.6096" layer="22" rot="MR90" align="center">GND</text>
+<text x="0.635" y="14.9225" size="0.6096" layer="22" rot="MR90" align="center">CLK</text>
+<text x="0.635" y="12.3825" size="0.6096" layer="22" rot="MR90" align="center">LE</text>
+<text x="40.64" y="14.9225" size="0.6096" layer="22" rot="MR90" align="center">CLK</text>
+<text x="40.64" y="12.3825" size="0.6096" layer="22" rot="MR90" align="center">LE</text>
+<text x="38.4175" y="3.4925" size="1.2192" layer="22" rot="MR0" align="center">6420
+7531</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
