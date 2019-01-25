@@ -27,7 +27,7 @@ menu: bin/menu
 
 bin/menu: out/menu.o $(reqOutFiles) | bin/
 	@g++ -o bin/menu $^ $(CXXFLAGS)
-	@echo Made Menu
+	@echo Made menu
 
 out/menu.o: src/menu.cpp | out/
 	@g++ -std=c++11 -o out/menu.o -c src/menu.cpp
