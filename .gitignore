@@ -8,3 +8,5 @@ circuit/scraps/
 *.xcodeProj/
 *.pro
 *.job
+*.o
+!makefile

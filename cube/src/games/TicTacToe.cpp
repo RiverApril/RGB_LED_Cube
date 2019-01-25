@@ -1,6 +1,6 @@
 
 
-#include "../cubeCore/cubeCore.hpp"
+#include "../core/cubeCore.hpp"
 
 #include <time.h>
 

@@ -1,16 +1,16 @@
 
-#include "../cubeCore/cubeCore.hpp"
-#include "../cubeCore/perlin.hpp"
-#include "../cubeCore/color.hpp"
+#include "../core/cubeCore.hpp"
+#include "../core/perlin.hpp"
+#include "../core/color.hpp"
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
 
-double starGrid[512];
-unsigned char pipeGrid[512];
-
+const int circlePoints = 20;
+const int circleX[20] = {4, 5, 6, 6, 7, 7, 6, 6, 5, 4, 3, 2, 1, 1, 0, 0, 1, 1, 2, 3};
+const int circleY[20] = {0, 1, 1, 2, 3, 4, 5, 6, 6, 7, 7, 6, 6, 5, 4, 3, 2, 1, 1, 0};
 
 int main(){
 
@@ -24,7 +24,10 @@ int main(){
     clock_t begin = clock();
 
     int effectIndex = 2;
-    const int effectCount = 4;
+    const int effectCount = 5;
+
+    double starGrid[512];
+    unsigned char pipeGrid[512];
 
     double twingleTimer = 0;
 
@@ -39,6 +42,11 @@ int main(){
     unsigned char pipeDir[PIPES];
     const color_t colorMap[PIPES+1] = {0x000000, 0xFF0000, 0x00FF00, 0x0000FF, 0xFF00FF};
     double pipeTimer = 0;
+
+    double spinSpeed = 100;
+    double spinVertialSpeed = 2;
+    double spinnerIndex = 0;
+    double spinnerZ = 0;
 
     bool reset = true;
 
@@ -147,7 +155,7 @@ int main(){
 
                 break;
             }
-            case 3:{
+            case 3:{ // pipes
                 pipeTimer -= delta;
                 if(pipeTimer <= 0){
                     pipeTimer = 0.05;
@@ -185,6 +193,20 @@ int main(){
                 for(pos_t i = 0; i < 512; i++){
                     LightCore::setLight(i, colorMap[pipeGrid[i]]);
                 }
+                LightCore::swapBuffers();
+                break;
+            }
+            case 4:{ // spinner
+                LightCore::clearAll();
+                spinnerIndex += spinSpeed * delta;
+                spinnerZ += spinVertialSpeed * delta;
+                if(spinnerIndex >= circlePoints){
+                    spinnerIndex -= circlePoints;
+                }
+                if(spinnerZ >= 8){
+                    spinnerZ -= 8;
+                }
+                LightCore::setLight(circleX[(int)spinnerIndex], circleY[(int)spinnerIndex], (int)spinnerZ, 0xFFFFFF);
                 LightCore::swapBuffers();
                 break;
             }

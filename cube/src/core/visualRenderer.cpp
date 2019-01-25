@@ -1,5 +1,5 @@
 
-#include "Cube8VisualRenderer.hpp"
+#include "visualRenderer.hpp"
 
 #include <SDL2/SDL.h>
 #include <vector>
@@ -27,7 +27,7 @@ extern const unsigned long VISUAL_KEY_CODE_HOME = SDL_SCANCODE_ESCAPE;
 #define con (controller[i])
 
 
-Cube8VisualRenderer::Cube8VisualRenderer(string title, int windowWidth, int windowHeight){
+visualRenderer::visualRenderer(string title, int windowWidth, int windowHeight){
     
     this->windowWidth = windowWidth;
     this->windowHeight = windowHeight;
@@ -83,7 +83,7 @@ Cube8VisualRenderer::Cube8VisualRenderer(string title, int windowWidth, int wind
     
 }
 
-void Cube8VisualRenderer::project(double ax, double ay, double az, double& bx, double& by, double& size){
+void visualRenderer::project(double ax, double ay, double az, double& bx, double& by, double& size){
     
     double px = ax - cameraPos.x;
     double py = ay - cameraPos.y;
@@ -109,11 +109,11 @@ void Cube8VisualRenderer::project(double ax, double ay, double az, double& bx, d
 }
 
 
-void Cube8VisualRenderer::setBuffer(color_t** buffer){
+void visualRenderer::setBuffer(color_t** buffer){
     this->buffer = buffer;
 }
 
-void Cube8VisualRenderer::draw(){
+void visualRenderer::draw(){
     SDL_RenderClear(renderer);
     
     //SDL_SetRenderDrawColor(renderer, 0xCC, 0xEE, 0xFF, 255);
@@ -254,8 +254,8 @@ void Cube8VisualRenderer::draw(){
         }
     };
 
-    if(controllerCount == 0){
-        tryToLoadControllers();
+    if(controllerCount == 0 && anim < 1){
+        tryToLoadControllers(true);
     }
     
     endTick = SDL_GetTicks();
@@ -264,7 +264,7 @@ void Cube8VisualRenderer::draw(){
 }
 
 
-void Cube8VisualRenderer::close(){
+void visualRenderer::close(){
     running = false;
     for(int i = 0; i < controllerCount; i++){
         SDL_GameControllerClose(controller[i]);
@@ -273,7 +273,7 @@ void Cube8VisualRenderer::close(){
     SDL_Quit();
 }
 
-void Cube8VisualRenderer::tryToLoadControllers(){
+void visualRenderer::tryToLoadControllers(bool silentIf0){
     #ifdef noJoyJustKeyboard
     return;
     #endif
@@ -290,11 +290,13 @@ void Cube8VisualRenderer::tryToLoadControllers(){
             }
         }
     }
-    printf("Loaded %d controllers\n", controllerCount);
+    if(!silentIf0 || controllerCount!=0){
+        printf("Loaded %d controllers\n", controllerCount);
+    }
 }
 
 
-void Cube8VisualRenderer::setButtonsAndAxes(bool* buttonDown, signed short* axis){
+void visualRenderer::setButtonsAndAxes(bool* buttonDown, signed short* axis){
 
     for(int i = 0; i < JS_BUTTON_COUNT; i++){
         buttonDown[i] = 0;

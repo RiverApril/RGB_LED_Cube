@@ -1,7 +1,7 @@
 
 
-#ifndef Cube8VisualRenderer_hpp
-#define Cube8VisualRenderer_hpp
+#ifndef visualRenderer_hpp
+#define visualRenderer_hpp
 
 extern const unsigned long VISUAL_KEY_CODE_START;
 extern const unsigned long VISUAL_KEY_CODE_SELECT;
@@ -39,7 +39,7 @@ struct pixel {
     color_t color;
 };
 
-class Cube8VisualRenderer {
+class visualRenderer {
 
     color_t** buffer;
     
@@ -73,7 +73,7 @@ public:
     SDL_GameController* controller[8];
     int controllerCount = 0;
 
-    Cube8VisualRenderer(std::string title, int windowWidth, int windowHeight);
+    visualRenderer(std::string title, int windowWidth, int windowHeight);
     
     void setBuffer(color_t** buffer);
     void draw();
@@ -83,10 +83,10 @@ public:
     double getDelta(){return delta;}
     void close();
 
-    void tryToLoadControllers();
+    void tryToLoadControllers(bool silentIf0 = false);
     void setButtonsAndAxes(bool* buttonDown, signed short* axis);
     
     
 };
 
-#endif /* Cube8VisualRenderer_hpp */
+#endif /* visualRenderer_hpp */

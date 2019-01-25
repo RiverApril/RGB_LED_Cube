@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <iostream>
 
-#include "../cubeCore/cubeCore.hpp"
+#include "core/cubeCore.hpp"
 
 struct Frame {
     double delay;
@@ -30,13 +30,18 @@ bool loadAnim(std::string s, Anim& anim){
 
     std::map<char, color_t> colorMap;
 
-    std::ifstream infile(("games/"+s).c_str());
+    std::ifstream infile(("anim/"+s).c_str());
     
     bool lookingForVar = true;
     bool lookingForLayers = false;
     int lookingAtLayerLeft = 0;
     char layerT;
     int layerI;
+
+    if(!infile){
+        printf("Couldn't find animation: %s\n", s.c_str());
+        return false;
+    }
 
     std::string line;
     while(std::getline(infile, line)){
@@ -154,20 +159,24 @@ std::vector<Anim> loadAnims(){
     std::vector<Anim> anims;
     DIR *dp;
     struct dirent *dirp;
-    dp = opendir("games");
+    dp = opendir("anim");
 
-    while ((dirp = readdir(dp)) != NULL) {
-        std::string fn = std::string(dirp->d_name);
-        if(fn.size() > 5){
-            if(fn.compare(fn.size()-5, 5, ".anim") == 0){
-                Anim anim;
-                if(loadAnim(fn.c_str(), anim)){
-                    anims.push_back(anim);
+    if(dp){
+        while ((dirp = readdir(dp)) != NULL) {
+            std::string fn = std::string(dirp->d_name);
+            if(fn.size() > 5){
+                if(fn.compare(fn.size()-5, 5, ".anim") == 0){
+                    Anim anim;
+                    if(loadAnim(fn.c_str(), anim)){
+                        anims.push_back(anim);
+                    }
                 }
             }
         }
+        closedir(dp);
+    }else{
+        printf("Failed to read animation folder.\n");
     }
-    closedir(dp);
     return anims;
 }
 
@@ -194,6 +203,10 @@ std::string runMenu(){
             }
             printf("\n");
         }*/
+    }
+
+    if(anims.size() == 0){
+        return "";
     }
 
     if(selected >= anims.size()){
@@ -274,7 +287,11 @@ int main(){
 
     while(true){
         std::string selectedGame = runMenu();
-        system(("./games/"+selectedGame).c_str());
+        if(selectedGame.length() == 0){
+            break;
+        }else{
+            system(("./bin/"+selectedGame).c_str());
+        }
     }
 
     return 0;

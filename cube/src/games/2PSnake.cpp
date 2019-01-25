@@ -1,5 +1,5 @@
 
-#include "../cubeCore/cubeCore.hpp"
+#include "../core/cubeCore.hpp"
 
 #include <stdlib.h>
 #include <stdio.h>

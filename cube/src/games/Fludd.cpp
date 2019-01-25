@@ -1,7 +1,6 @@
 
-#include "../cubeCore/cubeCore.hpp"
-
-#include "../cubeCore/geometry.hpp"
+#include "../core/cubeCore.hpp"
+#include "../core/geometry.hpp"
 
 #include <stdlib.h>
 #include <stdio.h>
