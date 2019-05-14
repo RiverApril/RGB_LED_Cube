@@ -10,3 +10,4 @@ circuit/scraps/
 *.job
 *.o
 !makefile
+.vscode/

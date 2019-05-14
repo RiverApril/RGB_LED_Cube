@@ -59,3 +59,8 @@ color_t hsv2rgb(double hue, double sat, double val) { // degrees, 0-1, 0-1
     }
     return RGB((color_t)(outR*0xFF), (color_t)(outG*0xFF), (color_t)(outB*0xFF));;     
 }
+
+
+color_t multiplyColor(color_t color, double multiply){
+    return ((((unsigned char)(((color >> 16) & 0xFF) * multiply)) & 0xFF) << 16) | ((((unsigned char)(((color >> 8) & 0xFF) * multiply)) & 0xFF) << 8) | (((unsigned char)((color & 0xFF) * multiply)) & 0xFF);
+}

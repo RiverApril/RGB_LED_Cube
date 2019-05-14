@@ -1,5 +1,5 @@
 
-GAMES = Connect4 Debug Effects PerfectFit PuzzleCube Reversi Snake TicTacToe
+GAMES = Connect4 Debug Effects PerfectFit PuzzleCube Reversi Snake TicTacToe Caves
 
 reqOutFiles = out/core/cubeCore.o out/core/visualRenderer.o out/core/color.o out/core/perlin.o out/core/geometry.o
 CXXFLAGS =
@@ -19,7 +19,11 @@ $(GAMES):
 games: $(addprefix bin/, $(GAMES))
 
 bin/%: src/games/%.cpp $(reqOutFiles) | bin/
-	@g++ -o $@ src/games/$(patsubst bin/%,%,$@).cpp $(reqOutFiles) $(CXXFLAGS)
+	@if [ -d "src/games/$(patsubst bin/%,%,$@)" ];then \
+		g++ -std=c++11 -o $@ src/games/$(patsubst bin/%,%,$@).cpp src/games/$(patsubst bin/%,%,$@)/*.cpp $(reqOutFiles) $(CXXFLAGS);	\
+	else \
+		g++ -std=c++11 -o $@ src/games/$(patsubst bin/%,%,$@).cpp  $(reqOutFiles) $(CXXFLAGS); \
+	fi
 	@echo Made $(patsubst bin/%,%,$@)
 
 menu: bin/menu

@@ -1,0 +1,14 @@
+H: FFA080
+B: A0A0FF
+
+frame: 100
+zLayer: 7
+        
+   BBB  
+  B     
+ B H    
+ B  H   
+ B   H  
+      H 
+        
+endframe

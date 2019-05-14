@@ -194,8 +194,10 @@ std::string runMenu(){
 
     std::vector<Anim> anims = loadAnims();
 
+    printf("Games (%lu):\n", anims.size());
     for(int i = 0; i < anims.size(); i++){
-        printf("Game [%s]: anim has %lu frames\n", anims[i].name.c_str(), anims[i].frames.size());
+        int count = anims[i].frames.size();
+        printf("[%s] (%d frame%s)\n", anims[i].name.c_str(), count, count==1?"":"s");
         /*for(int j = 0; j < anims[i].frames.size(); j++){
             printf("Frame %d\n", j);
             for(int k = 0; k < 512; k++){

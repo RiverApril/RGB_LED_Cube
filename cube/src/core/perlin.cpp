@@ -38,6 +38,30 @@ const int p[512] = { 151,160,137,91,90,15,
    138,236,205,93,222,114,67,29,24,72,243,141,128,195,78,66,215,61,156,180
 };
 
+
+double noise(double x, double y) {
+    int X = (int)floor(x) & 255,                  // FIND UNIT CUBE THAT
+        Y = (int)floor(y) & 255;                  // CONTAINS POINT.
+
+    x -= floor(x);                                // FIND RELATIVE X,Y,Z
+    y -= floor(y);                                // OF POINT IN CUBE.
+    double u = fade(x),                                // COMPUTE FADE CURVES
+           v = fade(y);                                // FOR EACH OF X,Y,Z.
+
+    int aa, ab, ba, bb;
+    aa = p[p[ X ]+ Y ];
+    ab = p[p[ X ]+Y+1];
+    ba = p[p[X+1]+ Y ];
+    bb = p[p[X+1]+Y+1];
+
+    double x1, x2, y1;
+    x1 = lerp(grad(aa, x  , y  ), grad(ba, x-1, y  ), u);
+    x2 = lerp(grad(ab, x  , y-1), grad(bb, x-1, y-1), u);
+    y1 = lerp(x1, x2, v);
+    
+    return (y1+1)/2;
+}
+
 double noise(double x, double y, double z) {
     int X = (int)floor(x) & 255,                  // FIND UNIT CUBE THAT
         Y = (int)floor(y) & 255,                  // CONTAINS POINT.
@@ -72,6 +96,17 @@ double noise(double x, double y, double z) {
     
     return (z1+1)/2;
 }
+double grad(int hash, double x, double y){
+    switch(hash & 0x3) {
+        case 0x0: return  x + y;
+        case 0x1: return -x + y;
+        case 0x2: return  x - y;
+        case 0x3: return -x - y;
+
+        default: return 0;
+    }
+}
+
 double grad(int hash, double x, double y, double z){
     switch(hash & 0xF) {
         case 0x0: return  x + y;

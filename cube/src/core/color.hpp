@@ -7,7 +7,7 @@
 
 color_t hsv2rgb(double hue, double sat, double val);
 
-
+color_t multiplyColor(color_t color, double multiply);
 
 
 
