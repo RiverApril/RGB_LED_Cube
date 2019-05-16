@@ -1,14 +1,15 @@
 
 GAMES = Connect4 Debug Effects PerfectFit PuzzleCube Reversi Snake TicTacToe Caves Fludd
 
-reqOutFiles = out/core/cubeCore.o out/core/visualRenderer.o out/core/color.o out/core/perlin.o out/core/geometry.o
+reqOutFiles = out/core/cubeCore.o out/core/color.o out/core/perlin.o out/core/geometry.o
 CXXFLAGS =
 BASIC_CXXFLAGS = -std=c++11
-ifneq ($(filter arm%,$(shell uname -p)),)
+ifneq ($(filter arm%,$(shell uname -m)),)
 CXXFLAGS += -lwiringPi -pthread
 BASIC_CXXFLAGS += -O3
 else
 CXXFLAGS += `pkg-config --cflags --libs sdl2`
+reqOutFiles += out/core/visualRenderer.o
 endif
 
 .PHONY: all clean games $(GAMES) $(GAMESgame)

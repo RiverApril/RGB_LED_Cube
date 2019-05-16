@@ -4,6 +4,7 @@
 #include "../../core/geometry.hpp"
 
 #include <vector>
+#include <stdio.h>
 #include <cmath>
 
 using namespace std;
