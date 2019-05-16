@@ -230,7 +230,7 @@ void visualRenderer::draw(){
         r.h = 4;
         r.x = 4 + xps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2])) * 8 + 1;
         r.y = yy + yps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2+1])) * 8 + 1;
-        SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
+        SDL_SetRenderDrawColor(renderer, 0x00, 0x80, 0xFF, 0xFF);
         SDL_RenderFillRect(renderer, &r);
     }
 
@@ -242,7 +242,7 @@ void visualRenderer::draw(){
         if(JoystickCore::buttonDown[i]){
             SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
         }else{
-            SDL_SetRenderDrawColor(renderer, 0x40, 0x40, 0x40, 0xFF);
+            SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0x40);
         }
         SDL_RenderFillRect(renderer, &r);
     }
