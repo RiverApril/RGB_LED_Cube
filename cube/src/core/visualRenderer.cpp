@@ -183,7 +183,7 @@ void visualRenderer::draw(){
         SDL_RenderDrawRect(renderer, &r);
     }
     
-    int yy = 4;
+    //int yy = 4;
 
     /*for(int i = 0; i < JS_AXIS_COUNT; i++){
         r.x = 4;
@@ -229,14 +229,14 @@ void visualRenderer::draw(){
         r.w = 4;
         r.h = 4;
         r.x = 4 + xps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2])) * 8 + 1;
-        r.y = yy + yps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2+1])) * 8 + 1;
+        r.y = 4 + yps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2+1])) * 8 + 1;
         SDL_SetRenderDrawColor(renderer, 0x00, 0x80, 0xFF, 0xFF);
         SDL_RenderFillRect(renderer, &r);
     }
 
     for(int i = 0; i < JS_BUTTON_COUNT; i++){
         r.x = 4 + xp[i]*8;
-        r.y = yy + yp[i]*8;
+        r.y = 4 + yp[i]*8;
         r.w = 6;
         r.h = 6;
         if(JoystickCore::buttonDown[i]){
