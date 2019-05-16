@@ -7,13 +7,13 @@
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
+#include <algorithm>
 
-#define pi (3.1415926535897932385)
+using namespace std;
+
+#define pi (3.1415926535897932)
 
 #define CUBE_ANGLE (0.61547970867038734) // asin(1/sqrt(3))
-
-#define min(a, b) (((a)<(b))?(a):(b))
-#define max(a, b) (((a)>(b))?(a):(b))
 
 #define WATER_POWER 10.0
 #define SLIME_SPREAD 0.0001
@@ -40,7 +40,7 @@ double brightnessFix(double x){
 }
 
 double distanceFromRay(v3 center, v3 dir, v3 p){
-    double t = fmax(0, dot(p - center, dir));
+    double t = max(0.0, dot(p - center, dir));
     v3 j = center + t*dir;
     return length(j - p);
 }
@@ -64,7 +64,10 @@ double getColorFromIntensity(double w, double s, int x, int y, int z){
     if(w+s > 1.0){
         extra = w+s-1.0;
     }
-    return RGB((int)(min(s+extra, 1.0)*0xFF), (int)(min(w/2.0+extra, 1.0)*0xFF), (int)(min(w+s, 1.0)*0xFF));
+    return RGB(
+        (int)(min(s+extra, 1.0)*0xFF), 
+        (int)(min(w/2.0+extra, 1.0)*0xFF), 
+        (int)(min(w+s, 1.0)*0xFF));
 }
 
 int main(){

@@ -5,9 +5,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <math.h>
+#include <algorithm>
 
-#define min(a, b) (((a)<(b))?(a):(b))
-#define max(a, b) (((a)>(b))?(a):(b))
+using namespace std;
 
 color_t wallColor = 0xFFFF00;
 color_t shapeColor = 0x0000FF;

@@ -4,6 +4,7 @@
 
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdlib.h>
 
 #ifdef __arm__
 #include <pthread.h>
@@ -106,11 +107,11 @@ namespace JoystickCore {
 
 #define PI (3.14159265358979323)
 
-#define DEADBAND_VALUE (2000.0)
-
-#define deadband(a) ((abs(a) < DEADBAND_VALUE) ? 0.0 : (a))
+#define DEADBAND_VALUE (2000)
 
 #define LT_RUNNING_BUFFER_INDEX 512
+
+int deadband(int val);
 
 namespace LightCore {
 

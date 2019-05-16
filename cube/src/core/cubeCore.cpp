@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <cstring>
 
+int deadband(int val){
+    if(abs(val) < DEADBAND_VALUE) return 0;
+    return val;
+}
 
 #ifdef __arm__
 
