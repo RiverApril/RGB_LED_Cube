@@ -18,11 +18,11 @@ const int buttonMove[4] = {JS_BUTTON_LEFT, JS_BUTTON_RIGHT, JS_BUTTON_UP, JS_BUT
 const int xDif[4] = {-1, 1, 0, 0};
 const int yDif[4] = {0, 0, -1, 1};
 
-const int buttonStayStill = JS_BUTTON_L1;
+const int buttonStayStill = JS_BUTTON_L2;
 const int buttonHit = JS_BUTTON_X;
 const int buttonUse = JS_BUTTON_A;
 const int buttonAimUp = JS_BUTTON_R1;
-const int buttonAimDown = JS_BUTTON_R2;
+const int buttonAimDown = JS_BUTTON_L1;
 
 const int buttonNextItem = JS_BUTTON_SELECT;
 
