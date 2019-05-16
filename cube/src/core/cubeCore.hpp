@@ -22,10 +22,10 @@
 #define JS_BUTTON_RIGHT 3
 #define JS_BUTTON_UP 4
 #define JS_BUTTON_DOWN 5
-#define JS_BUTTON_X 6
-#define JS_BUTTON_Y 7
-#define JS_BUTTON_B 8
-#define JS_BUTTON_A 9
+#define JS_BUTTON_Y 6
+#define JS_BUTTON_X 7
+#define JS_BUTTON_A 8
+#define JS_BUTTON_B 9
 #define JS_BUTTON_L1 10
 #define JS_BUTTON_L2 11
 #define JS_BUTTON_R1 12

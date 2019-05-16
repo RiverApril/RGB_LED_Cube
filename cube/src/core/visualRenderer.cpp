@@ -12,10 +12,10 @@ extern const unsigned long VISUAL_KEY_CODE_LEFT = SDL_SCANCODE_A;
 extern const unsigned long VISUAL_KEY_CODE_RIGHT = SDL_SCANCODE_D;
 extern const unsigned long VISUAL_KEY_CODE_FORWARD = SDL_SCANCODE_W;
 extern const unsigned long VISUAL_KEY_CODE_BACKWARD = SDL_SCANCODE_S;
-extern const unsigned long VISUAL_KEY_CODE_A = SDL_SCANCODE_L;
-extern const unsigned long VISUAL_KEY_CODE_B = SDL_SCANCODE_K;
-extern const unsigned long VISUAL_KEY_CODE_X = SDL_SCANCODE_I;
-extern const unsigned long VISUAL_KEY_CODE_Y = SDL_SCANCODE_J;
+extern const unsigned long VISUAL_KEY_CODE_A = SDL_SCANCODE_K;
+extern const unsigned long VISUAL_KEY_CODE_B = SDL_SCANCODE_L;
+extern const unsigned long VISUAL_KEY_CODE_X = SDL_SCANCODE_J;
+extern const unsigned long VISUAL_KEY_CODE_Y = SDL_SCANCODE_I;
 extern const unsigned long VISUAL_KEY_CODE_L1 = SDL_SCANCODE_Q;
 extern const unsigned long VISUAL_KEY_CODE_R1 = SDL_SCANCODE_E;
 extern const unsigned long VISUAL_KEY_CODE_L2 = SDL_SCANCODE_U;
@@ -185,7 +185,7 @@ void visualRenderer::draw(){
     
     int yy = 4;
 
-    for(int i = 0; i < JS_AXIS_COUNT; i++){
+    /*for(int i = 0; i < JS_AXIS_COUNT; i++){
         r.x = 4;
         r.y = yy;;
         r.w = 32;
@@ -210,7 +210,43 @@ void visualRenderer::draw(){
         }
         SDL_RenderFillRect(renderer, &r);
         yy += 8;
+    }*/
+    // l2 l1   r1 r2 
+    //
+    //  u         y
+    // l r  c s  x b
+    //  d    h    a
+    //   |       |
+    //  -o-     -o-     
+    //   |       |
+    // start, select, left, right, up, down, y, x, a, b, l1, l2, r1, r2, ls, rs, home
+    const int xp[17] = {6, 4, 0, 2, 1, 1, 9, 8, 9, 10, 1, 1, 9, 9, 3, 7, 5};
+    const int yp[17] = {4, 4, 4, 4, 3, 5, 3, 4, 5, 4, 1, 0, 1, 0, 7, 7, 5};
+    const int xps[4] = {3, 7};
+    const int yps[4] = {7, 7};
+
+    for(int i = 0; i < 2; i++){
+        r.w = 4;
+        r.h = 4;
+        r.x = 4 + xps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2])) * 8 + 1;
+        r.y = yy + yps[i]*8 + (AXIS_DOUBLE(JoystickCore::axis[i*2+1])) * 8 + 1;
+        SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
+        SDL_RenderFillRect(renderer, &r);
     }
+
+    for(int i = 0; i < JS_BUTTON_COUNT; i++){
+        r.x = 4 + xp[i]*8;
+        r.y = yy + yp[i]*8;
+        r.w = 6;
+        r.h = 6;
+        if(JoystickCore::buttonDown[i]){
+            SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
+        }else{
+            SDL_SetRenderDrawColor(renderer, 0x40, 0x40, 0x40, 0xFF);
+        }
+        SDL_RenderFillRect(renderer, &r);
+    }
+
 
 
     //printf("r: %d, %d\n", r.x, r.y);
