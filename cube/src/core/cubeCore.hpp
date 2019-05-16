@@ -42,6 +42,8 @@
 #define JS_AXIS_RX 2
 #define JS_AXIS_RY 3
 
+#define AXIS_DOUBLE(a) ((a>0)?(a/32767.0):(a/32768.0))
+
 //Orientation of cube:
 //up: z+
 //down: z-
@@ -103,6 +105,10 @@ namespace JoystickCore {
 #define RGB(r,g,b) (((r)<<16)|((g)<<8)|(b))
 
 #define PI (3.14159265358979323)
+
+#define DEADBAND_VALUE (2000.0)
+
+#define deadband(a) ((abs(a) < DEADBAND_VALUE) ? 0.0 : (a))
 
 #define LT_RUNNING_BUFFER_INDEX 512
 

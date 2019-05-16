@@ -65,7 +65,7 @@ namespace JoystickCore {
                     //printf("Up: %d\n", e.number);
                 }
             }else if((e.type & ~JS_EVENT_INIT) == JS_EVENT_AXIS){
-                axis[e.number] = e.value;
+                axis[e.number] = deadband(e.value);
                 //printf("Axis[%d]: %d\n", e.number, e.value);
             }
 

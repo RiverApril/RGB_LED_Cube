@@ -183,6 +183,36 @@ void visualRenderer::draw(){
         SDL_RenderDrawRect(renderer, &r);
     }
     
+    int yy = 4;
+
+    for(int i = 0; i < JS_AXIS_COUNT; i++){
+        r.x = 4;
+        r.y = yy;;
+        r.w = 32;
+        r.h = 6;
+        SDL_SetRenderDrawColor(renderer, 0x40, 0x40, 0x40, 0xFF);
+        SDL_RenderFillRect(renderer, &r);
+        r.w = (AXIS_DOUBLE(JoystickCore::axis[i]) + 1) * 16;
+        SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
+        SDL_RenderFillRect(renderer, &r);
+        yy += 8;
+    }
+
+    for(int i = 0; i < JS_BUTTON_COUNT; i++){
+        r.x = 4;
+        r.y = yy;
+        r.w = 6;
+        r.h = 6;
+        if(JoystickCore::buttonDown[i]){
+            SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
+        }else{
+            SDL_SetRenderDrawColor(renderer, 0x40, 0x40, 0x40, 0xFF);
+        }
+        SDL_RenderFillRect(renderer, &r);
+        yy += 8;
+    }
+
+
     //printf("r: %d, %d\n", r.x, r.y);
     //printf("b: %f, %f\n", bx, by);
     
@@ -206,8 +236,8 @@ void visualRenderer::draw(){
     }
 
     for(int i = 0; i < controllerCount; i++){
-        jigYaw -= (SDL_GameControllerGetAxis(con, SDL_CONTROLLER_AXIS_RIGHTX) / 32767.0)*rotSpeed*delta;
-        jigPitch += (SDL_GameControllerGetAxis(con, SDL_CONTROLLER_AXIS_RIGHTY) / 32767.0)*rotSpeed*delta;
+        jigYaw -= AXIS_DOUBLE(deadband(SDL_GameControllerGetAxis(con, SDL_CONTROLLER_AXIS_RIGHTX)))*rotSpeed*delta;
+        jigPitch += AXIS_DOUBLE(deadband(SDL_GameControllerGetAxis(con, SDL_CONTROLLER_AXIS_RIGHTY)))*rotSpeed*delta;
     }
     
     if(jigPitch > M_PI / 2){
@@ -231,7 +261,7 @@ void visualRenderer::draw(){
         dotScale += 50*delta;
     }
     
-    cameraAngle.y = jigYaw;;
+    cameraAngle.y = jigYaw;
     cameraAngle.x = jigPitch;
     
     cameraPos.x = jigDist*cos(-jigYaw - M_PI / 2)*-sin(-jigPitch - M_PI / 2);
@@ -332,5 +362,9 @@ void visualRenderer::setButtonsAndAxes(bool* buttonDown, signed short* axis){
         axis[JS_AXIS_RY] += SDL_GameControllerGetAxis(con, SDL_CONTROLLER_AXIS_RIGHTY);
     }
 
-    printf("l: (%d, %d), r: (%d, %d)\n", axis[JS_AXIS_LX], axis[JS_AXIS_LY], axis[JS_AXIS_RX], axis[JS_AXIS_RY]);
+    for(int i = 0; i < JS_AXIS_COUNT; i++){
+        axis[i] = deadband(axis[i]);
+    }
+
+    //printf("l: (%d, %d), r: (%d, %d)\n", axis[JS_AXIS_LX], axis[JS_AXIS_LY], axis[JS_AXIS_RX], axis[JS_AXIS_RY]);
 }

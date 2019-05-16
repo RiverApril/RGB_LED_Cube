@@ -1,0 +1,159 @@
+P: FF00FF
+B: 0080FF
+
+frame: 100
+zLayer: 7
+PPPPPPPP
+B      P
+B      P
+B      P
+B      P
+B      P
+B      P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+ PPPPPPP
+ B     P
+ B     P
+ B     P
+ B     P
+B      P
+B      P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+  PPPPPP
+  B    P
+  B    P
+ B     P
+ B     P
+ B     P
+B      P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+   PPPPP
+   B   P
+   B   P
+  B    P
+  B    P
+ B     P
+ B     P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+    PPPP
+    B  P
+   B   P
+   B   P
+  B    P
+ B     P
+ B     P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+      PP
+     B P
+    B  P
+   B   P
+   B   P
+  B    P
+ B     P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+       P
+      BP
+     B P
+    B  P
+   B   P
+  B    P
+ B     P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+        
+       P
+      BP
+     B P
+   BB  P
+  B    P
+ B     P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+        
+        
+        
+      BP
+    BB P
+   B   P
+ BB    P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+  P     
+        
+        
+        
+     BBP
+   BB  P
+ BB    P
+B      P
+endframe
+
+frame: 100
+zLayer: 7
+  P     
+        
+        
+        
+        
+     BBP
+  BBB  P
+BB     P
+endframe
+
+frame: 100
+zLayer: 7
+  PP    
+        
+        
+        
+        
+        
+   BBBBP
+BBB    P
+endframe
+
+frame: 100
+zLayer: 7
+  PP    
+        
+        
+        
+        
+        
+        
+BBBBBBBP
+endframe
+
