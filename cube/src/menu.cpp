@@ -254,14 +254,14 @@ std::string runMenu(){
             running = false;
             printf("Selected game, exiting menu.\n");
         }
-        if(JoystickCore::buttonPressed[JS_BUTTON_LEFT]){
+        if(JoystickCore::buttonPressed[JS_BUTTON_LEFT] || JoystickCore::buttonPressed[JS_BUTTON_L1] || JoystickCore::buttonPressed[JS_BUTTON_L2]){
             selected = selected==0?(anims.size()-1):(selected-1);
             frame = 0;
             timer = 0;
             dirty = true;
             printf("Left, selecting index %d.\n", selected);
         }
-        if(JoystickCore::buttonPressed[JS_BUTTON_RIGHT]){
+        if(JoystickCore::buttonPressed[JS_BUTTON_RIGHT] || JoystickCore::buttonPressed[JS_BUTTON_R1] || JoystickCore::buttonPressed[JS_BUTTON_R2]){
             selected = (selected+1)%anims.size();
             frame = 0;
             timer = 0;
