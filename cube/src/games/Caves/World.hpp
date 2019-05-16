@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../../core/cubeCore.hpp"
-#include "Geometry.hpp"
+#include "../../core/geometry.hpp"
 
 #include <vector>
 #include <cmath>
@@ -46,7 +46,7 @@ public:
         return blocks[WORLD_INDEX(x, y, z)];
     }
 
-    Block getBlock(Pos3 pos){
+    Block getBlock(p3 pos){
         return getBlock(pos.x, pos.y, pos.z);
     }
 
@@ -62,7 +62,7 @@ public:
         return max(timeShift(light[WORLD_INDEX(x, y, z)] >> 4, timeOfDay) & 0xF, light[WORLD_INDEX(x, y, z)] & 0xF);
     }
 
-    void setBlock(Pos3 pos, Block b, bool update = true){
+    void setBlock(p3 pos, Block b, bool update = true){
         setBlock(pos.x, pos.y, pos.z, b, update);
     }
 

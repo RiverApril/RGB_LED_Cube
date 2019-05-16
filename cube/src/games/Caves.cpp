@@ -33,7 +33,7 @@ World* world;
 
 Player* player;
 
-Pos3 cameraCenter;
+p3 cameraCenter(0, 0, 0);
 int xFace = 1;
 int yFace = 0;
 
@@ -122,12 +122,12 @@ void initGame(){
 }
 
 void movePlayer(int x, int y){
-    if(!isSolid(world->getBlock(player->pos + Pos3(x, y, -1))) && !isSolid(world->getBlock(player->pos + Pos3(x, y, 0)))){
-        player->pos = player->pos + Pos3(x, y, -1);
-    }else if(!isSolid(world->getBlock(player->pos + Pos3(x, y, 0))) && !isSolid(world->getBlock(player->pos + Pos3(x, y, 1)))){
-        player->pos = player->pos + Pos3(x, y, 0);
-    }else if(!isSolid(world->getBlock(player->pos + Pos3(x, y, 1))) && !isSolid(world->getBlock(player->pos + Pos3(x, y, 2)))){
-        player->pos = player->pos + Pos3(x, y, 1);
+    if(!isSolid(world->getBlock(player->pos + p3(x, y, -1))) && !isSolid(world->getBlock(player->pos + p3(x, y, 0)))){
+        player->pos = player->pos + p3(x, y, -1);
+    }else if(!isSolid(world->getBlock(player->pos + p3(x, y, 0))) && !isSolid(world->getBlock(player->pos + p3(x, y, 1)))){
+        player->pos = player->pos + p3(x, y, 0);
+    }else if(!isSolid(world->getBlock(player->pos + p3(x, y, 1))) && !isSolid(world->getBlock(player->pos + p3(x, y, 2)))){
+        player->pos = player->pos + p3(x, y, 1);
     }
 }
 
@@ -198,11 +198,11 @@ void updateGame(double delta){
     }
 
     if(JoystickCore::buttonPressed[buttonHit]){
-        world->setBlock(player->pos + Pos3(aimX, aimY, aimZ), air);
+        world->setBlock(player->pos + p3(aimX, aimY, aimZ), air);
     }
 
     if(JoystickCore::buttonPressed[buttonUse]){
-        world->setBlock(player->pos + Pos3(aimX, aimY, aimZ), inventoryBlock);
+        world->setBlock(player->pos + p3(aimX, aimY, aimZ), inventoryBlock);
     }
 
     if(JoystickCore::buttonPressed[buttonNextItem]){

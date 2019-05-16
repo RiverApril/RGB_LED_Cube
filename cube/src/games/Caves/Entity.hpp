@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../../core/cubeCore.hpp"
+#include "../../core/geometry.hpp"
 #include "World.hpp"
-#include "Geometry.hpp"
 
 class World;
 
 class Entity{
 public:
-    Pos3 pos;
+    p3 pos;
     int height;
     color_t color;
     bool hasGravity;

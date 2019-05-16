@@ -27,4 +27,13 @@ v3 operator/(const double a, const v3 b);
 v3 operator/(const v3 a, const double b);
 
 
+struct p3{
+    p3(int x, int y, int z): x(x), y(y), z(z){}
+    int x, y, z;
+};
+
+p3 operator+(const p3 a, const p3 b);
+p3 operator-(const p3 a, const p3 b);
+
+
 #endif

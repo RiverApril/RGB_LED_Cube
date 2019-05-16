@@ -63,3 +63,12 @@ v3 operator/(const double a, const v3 b){
 v3 operator/(const v3 a, const double b){
     return v3(a.x/b, a.y/b, a.z/b);
 }
+
+
+p3 operator+(const p3 a, const p3 b){
+    return p3(a.x+b.x, a.y+b.y, a.z+b.z);
+}
+
+p3 operator-(const p3 a, const p3 b){
+    return p3(a.x-b.x, a.y-b.y, a.z-b.z);
+}
