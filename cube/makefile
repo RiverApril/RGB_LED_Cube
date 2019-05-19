@@ -14,7 +14,7 @@ endif
 
 .PHONY: all clean games $(GAMES) $(GAMESgame)
 
-all: menu games
+all: menu lightsOff games
 
 $(GAMES):
 	@make bin/$@
@@ -32,12 +32,22 @@ bin/%: src/games/%.cpp $(reqOutFiles) | bin/
 menu: bin/menu
 	@ln -sf bin/menu menu
 
+lightsOff: bin/lightsOff
+	@ln -sf bin/lightsOff lightsOff
+
 bin/menu: out/menu.o $(reqOutFiles) | bin/
-	@g++ -o bin/menu $^ $(CXXFLAGS)
+	@g++ $(BASIC_CXXFLAGS) -o bin/menu $^ $(CXXFLAGS)
 	@echo Made menu
+
+bin/lightsOff: out/lightsOff.o $(reqOutFiles) | bin/
+	@g++ $(BASIC_CXXFLAGS) -o bin/lightsOff $^ $(CXXFLAGS)
+	@echo Made lightsOff
 
 out/menu.o: src/menu.cpp | out/
 	@g++ $(BASIC_CXXFLAGS) -o out/menu.o -c src/menu.cpp
+
+out/lightsOff.o: src/lightsOff.cpp | out/
+	@g++ $(BASIC_CXXFLAGS) -o out/lightsOff.o -c src/lightsOff.cpp
 
 out/core/cubeCore.o: src/core/cubeCore.cpp src/core/cubeCore.hpp src/core/visualRenderer.hpp | out/core/
 	@g++ $(BASIC_CXXFLAGS) -o out/core/cubeCore.o -c src/core/cubeCore.cpp

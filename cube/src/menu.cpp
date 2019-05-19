@@ -289,11 +289,6 @@ std::string runMenu(){
 
 int main(){
 
-    #ifdef __arm__
-    system("sudo sixpair");
-    system("sudo sixad -s");
-    #endif
-
     while(true){
         std::string selectedGame = runMenu();
         if(selectedGame.length() == 0){
