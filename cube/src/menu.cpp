@@ -7,8 +7,11 @@
 #include <dirent.h>
 #include <stdio.h>
 #include <iostream>
+#include <algorithm>
 
 #include "core/cubeCore.hpp"
+
+using namespace std;
 
 struct Frame {
     double delay;
@@ -51,6 +54,9 @@ bool loadAnim(std::string s, Anim& anim){
         }
         if(lookingForVar){
             std::size_t found = line.find(":");
+            if(found == string::npos){
+                found = line.find(" ");
+            }
             std::string var = line.substr(0, found);
             if(lookingForLayers){
                 if(var.compare("xLayer") == 0){
@@ -122,7 +128,8 @@ bool loadAnim(std::string s, Anim& anim){
                     y = 8-lookingAtLayerLeft;
                     z = layerI;
                 }
-                for(int i = 0; i < line.size(); i++){
+                int lineSize = min((int)line.size(), 8);
+                for(int i = 0; i < lineSize; i++){
                     color_t c;
                     if(line[i] == ' '){
                         c = 0;

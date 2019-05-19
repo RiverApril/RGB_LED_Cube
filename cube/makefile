@@ -1,5 +1,5 @@
 
-GAMES = Connect4 Debug Effects PerfectFit PuzzleCube Reversi Snake TicTacToe Caves Fludd
+GAMES = Drop4 Debug Effects PerfectFit PuzzleCube Reversi Snake TicTacToe Caves Fludd
 
 reqOutFiles = out/core/cubeCore.o out/core/color.o out/core/perlin.o out/core/geometry.o
 CXXFLAGS =
