@@ -17,10 +17,10 @@ int deadband(int val){
 
 
 //#define PIN_Serial 14
-#define PIN_Clock 30
-#define PIN_Latch 21
-int serialPins[8] = {14, 0, 0, 0, 0, 0, 0, 0};
-int layerPins[8] = {6, 10, 11, 31, 26, 27, 28, 29};
+#define PIN_Clock 28
+#define PIN_Latch 25
+const int serialPins[8] = {24, 24, 24, 24, 24, 24, 24, 24};
+const int layerPins[8] = {8, 9, 7, 0, 2, 3, 12, 13};
 
 namespace JoystickCore {
     int file;
